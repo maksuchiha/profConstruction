@@ -1103,25 +1103,34 @@ address {
   color: #FFFFFF;
   opacity: 0.8;
   margin-bottom: 30px;
+  letter-spacing: 0.05em;
+}
+.application__data:first-letter {
+  text-transform: uppercase;
 }
 .application__list {
   list-style: disc;
   padding-left: 20px;
-  font-weight: 500;
+  margin-bottom: 25px;
+  letter-spacing: 0.05em;
+  font-weight: 300;
   font-size: 25px;
   line-height: 35px;
+  color: #FFFFFF;
   opacity: 0.8;
-  margin-bottom: 25px;
+}
+.application__list li:first-letter {
+  text-transform: uppercase;
 }
 .application__stars {
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 25px;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 0;
   max-width: 435px;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 35px;
+  opacity: 0.8;
 }
 .application__stars li {
   display: flex;
