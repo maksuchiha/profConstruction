@@ -10,6 +10,14 @@ const accordion = (list, item, itemActive) => {
     })
 }
 
+const getImagePath = () => {
+    const img = document.querySelector('.gallery-image__slide img')
+    const arr = img.getAttribute('src').split('/')
+    arr.pop()
+    return arr.join('/')
+
+}
+
 const swiper = new Swiper('.gallery-image', {
     // Optional parameters
     loop: false,
@@ -17,12 +25,12 @@ const swiper = new Swiper('.gallery-image', {
         nextEl: '.gallery-image__button_right',
         prevEl: '.gallery-image__button_left',
     },
-
+    autoHeight: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
-            return '<img class="swiper-slide gallery-image__miniature ' + className + '" src="./img/gallery/saf/'+ (index + 1) +'.jpg">';
+            return '<img class="swiper-slide gallery-image__miniature ' + className + '" src="'+ getImagePath() +'/'+ (index + 1) +'.jpg">';
 
         },
     },
@@ -31,14 +39,16 @@ const swiper = new Swiper('.gallery-image', {
 const swiperLent = new Swiper('.gallery-image__miniatures', {
     cssMode: true,
     loop: false,
+    slidesPerView: 'auto',
     navigation: {
         nextEl: ".gallery-image__button_r",
         prevEl: ".gallery-image__button_l",
     },
-    mousewheel: true,
-    keyboard: true,
-    slidesPerView: 'auto',
 });
+
+if (innerWidth < 1230) {
+    swiperLent.destroy()
+}
 
 
 

@@ -1170,7 +1170,6 @@ address {
   margin-bottom: 25px;
   background: #fff;
   border-radius: 10px;
-  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 16px;
   color: #000000;
   line-height: 20px;
@@ -2060,7 +2059,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: 35%;
   cursor: pointer;
-  z-index: 5;
+  z-index: 1;
 }
 .gallery-image__button_left {
   left: 20%;
@@ -2083,6 +2082,9 @@ button.swiper-pagination-bullet {
   left: auto;
   right: auto;
 }
+.gallery-image__miniatures .swiper-pagination-bullet-active {
+  border: 1px solid #fff;
+}
 .gallery-image__pagination {
   position: static;
   width: 95% !important;
@@ -2093,15 +2095,26 @@ button.swiper-pagination-bullet {
 .gallery-image__miniature {
   height: 100%;
   width: 17%;
+  object-fit: cover;
   display: flex;
   border-radius: 0;
   opacity: 1;
 }
-.gallery-image .swiper-pagination-bullet-active {
-  border: 1px solid #fff;
-}
 .gallery-lent {
   overflow: hidden;
+}
+
+@media (max-width: 1230px) {
+  .gallery-image__pagination {
+    margin: 0;
+    overflow: scroll;
+  }
+  .gallery-image__pagination::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery-image__button_l, .gallery-image__button_r {
+    display: none;
+  }
 }
 @media (max-width: 1022px) {
   .gallery__title {
@@ -2110,14 +2123,22 @@ button.swiper-pagination-bullet {
   .gallery-image__slide img {
     width: 80%;
   }
+  .gallery-image__miniatures {
+    height: 95px;
+  }
   .gallery-image__button_left {
     left: 0;
   }
   .gallery-image__button_right {
     right: 0;
   }
-  .gallery-image__button_l, .gallery-image__button_r {
-    display: none;
+}
+@media (max-width: 798px) {
+  .gallery-image__miniatures {
+    height: 70px;
+  }
+  .gallery-image__pagination {
+    width: 100% !important;
   }
 }
 @media (max-width: 606px) {
@@ -2127,6 +2148,14 @@ button.swiper-pagination-bullet {
   .gallery-image__button_left, .gallery-image__button_right {
     display: none;
   }
+  .gallery-image__miniatures {
+    height: 70px;
+  }
+  .gallery-image__miniature {
+    width: 25%;
+  }
+}
+@media (max-width: 405px) {
   .gallery-image__miniature {
     width: 33.333%;
   }
@@ -2457,7 +2486,6 @@ button.swiper-pagination-bullet {
   width: 60%;
   position: relative;
   z-index: 2;
-  height: 400px;
 }
 .product-description__img p {
   display: none;
