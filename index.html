@@ -893,18 +893,18 @@
         </section>
         <section class="modal">
             <div class="modal__opacity-block"></div>
-            <form class="modal__wrаpper" id="modal-form">
+            <form enctype="multipart/form-data" class="modal__wrаpper" id="modal-form">
                 <div class="modal__form">
                     <div class="modal-block__left">
                         <div class="modal__input-block">
-                            <input class="modal__input" type="text" name="" id="modal-firsName" placeholder="Ваше имя">
+                            <input aria-label="" class="modal__input" type="text" name="name" id="modal-firsName" placeholder="Ваше имя">
 
-                            <input class="modal__input" type="number" name="" id="modal-phone" placeholder="Телефон">
+                            <input aria-label="" class="modal__input" type="number" name="phone" id="modal-phone" placeholder="Телефон">
 
-                            <input class="modal__input" type="email" name="" id="modal-email"
+                            <input aria-label="" class="modal__input" type="email" name="email" id="modal-email"
                                 placeholder="Электронная почта">
 
-                            <input class=" modal__input" type="text" name="" id="modal-name-organization"
+                            <input aria-label="" class=" modal__input" type="text" name="organization" id="modal-name-organization"
                                 placeholder="Название организации">
                         </div>
                         <div class="modal-upload">
@@ -912,22 +912,19 @@
                                 ТЗ</label>
                             <a class="modal-upload__label modal-upload__label-link modal-upload__label_hidden"
                                 target="blank" href=""></a>
-                            <input type="file" name="file-upload" name="Прикрепить форму ТЗ"
+                            <input multiple type="file" name="file"
                                 class="modal-upload__button" id="modal-upload">
                         </div>
                         <div class="modal-drag-drop__wrapper">
-                            <label class="modal-drag-drop__label" for="modal-drag-drop">Прикрепить файл (ТЗ,
+                            <label class="modal-drag-drop__label" for="">Прикрепить файл (ТЗ,
                                 КП,
                                 описание)</label>
                             <a class="modal-drag-drop__label modal-drag-drop__label-link modal-drag-drop__label_hidden"
                                 target="blank" href=""></a>
-                            <input type="file" name="modal-drag-drop" id="modal-drag-drop" multiple="multiple"
-                                class="modal-drag-drop__button">
-
                         </div>
                     </div>
                     <div class="modal-block__right">
-                        <textarea aria-label="" class="modal__input modal__area" name="" id="" cols="30" rows="10"
+                        <textarea aria-label="" class="modal__input modal__area" name="textarea" id="" cols="30" rows="10"
                             placeholder="Текст сообщения"></textarea>
                         <button class="button modal__button">Пригласить в тендер</button>
                         <span class="modal-drag-drop__text">Нажимая кнопку «Пригласить в

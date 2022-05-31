@@ -1,6 +1,8 @@
 'use strict'
 
 const script = () => {
+    const thanksMessage = document.querySelector(`.thanks`)
+
     const form = () => {
         const form = document.querySelector('.feedback')
         const steps = form.querySelectorAll('.feedback__step')
@@ -23,9 +25,27 @@ const script = () => {
         })
     }
 
+    const sendFile = () => {
+        const form = document.getElementById('modal-form')
 
+        const serializeForm = (formNode) => new FormData(formNode)
+
+        async function sendData(data) {
+            return await fetch('./script/fileMailer.php', {
+                method: 'POST',
+                // headers: { 'Content-Type': 'multipart/form-data' },
+                body: serializeForm(data),
+            })
+        }
+        form.querySelector('button').addEventListener('click', () => {
+            sendData(form)
+        })
+    }
+
+    sendFile()
     form()
     accordion('faq__list', 'faq__item', 'faq__item_active')
+
 }
 
 script()
