@@ -39,6 +39,8 @@ const script = () => {
         }
         form.querySelector('button').addEventListener('click', () => {
             sendData(form)
+            document.querySelector('.modal').style.display = 'none'
+            thanksMessage.style.display = 'flex'
         })
     }
 

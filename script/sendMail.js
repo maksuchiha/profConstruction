@@ -42,6 +42,29 @@ const thanksClose = () => {
     })
 }
 
+const sendFile = () => {
+    const form = document.getElementById('modal-form')
+
+    const serializeForm = (formNode) => new FormData(formNode)
+
+    async function sendData(data) {
+        return await fetch('./script/fileMailer.php', {
+            method: 'POST',
+            // headers: { 'Content-Type': 'multipart/form-data' },
+            body: serializeForm(data),
+        })
+    }
+    form.querySelector('button').addEventListener('click', () => {
+        sendData(form)
+        document.querySelector('.modal').style.display = 'none'
+        document.querySelector('.thanks').style.display = 'flex'
+    })
+}
+
+if (document.getElementById('modal-form')) {
+    sendFile()
+}
+
 if (document.querySelector('.application__right')) {
     sendMail('application__right', 'application__form', 'thanks')
     sendMail('footer__info', 'footer-application', 'thanks')
