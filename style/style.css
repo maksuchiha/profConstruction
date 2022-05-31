@@ -2679,15 +2679,21 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width: 606px) {
+  .product-title {
+    padding: 0;
+  }
+  .product-title__item {
+    font-size: 24px;
+  }
   .product-description::before {
     top: 25%;
     width: 47%;
   }
   .product-description__img {
-    height: 300px;
+    margin-bottom: 20px;
   }
-  .product-description__img * {
-    height: 300px;
+  .product-description__img img {
+    object-fit: scale-down;
   }
   .product-card::after {
     top: -50%;
@@ -4325,6 +4331,34 @@ button.swiper-pagination-bullet {
   .modal__wrаpper {
     width: 90%;
   }
+}
+.thanks {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 15px;
+}
+.thanks_active {
+  display: flex;
+}
+.thanks__modal {
+  background: #2C4442;
+  margin: auto;
+  padding: 25px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  position: relative;
+}
+.thanks__close {
+  right: 15px;
+  top: 15px;
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */
