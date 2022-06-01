@@ -44,6 +44,7 @@ const script = () => {
         })
     }
 
+
     sendFile()
     form()
     accordion('faq__list', 'faq__item', 'faq__item_active')
