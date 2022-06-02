@@ -3939,6 +3939,10 @@ button.swiper-pagination-bullet {
   margin: auto;
   flex-wrap: wrap;
 }
+.advantage-card__img svg {
+  width: 100%;
+  height: 100%;
+}
 .advantage-card__text {
   font-family: "Roboto", sans-serif;
   font-style: normal;
