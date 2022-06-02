@@ -3573,7 +3573,7 @@ button.swiper-pagination-bullet {
   }
 }
 .about-product {
-  padding-top: 100px;
+  padding-top: 170px;
   padding-bottom: 100px;
 }
 .about-product__wrapper {
@@ -3666,7 +3666,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1230px) {
   .about-product {
-    padding-top: 150px;
+    padding-top: 200px;
   }
   .about-product__wrapper {
     flex-direction: column;
@@ -3696,7 +3696,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 798px) {
   .about-product {
-    padding-top: 100px;
+    padding-top: 230px;
     padding-bottom: 50px;
   }
   .about-product-text__title {
