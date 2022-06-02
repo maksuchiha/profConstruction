@@ -595,6 +595,10 @@ address {
 .header_hidden-desktop {
   display: none;
 }
+.header__social {
+  display: none !important;
+  margin-bottom: 20px;
+}
 
 @media (max-width: 1230px) {
   .header__list li:not(:last-of-type) {
@@ -715,6 +719,9 @@ address {
   }
   .header_visible-mobile {
     display: block;
+  }
+  .header__social {
+    display: flex !important;
   }
 }
 @media (max-width: 798px) {
