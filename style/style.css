@@ -2660,7 +2660,6 @@ button.swiper-pagination-bullet {
   .product-title__item {
     font-weight: 400;
     font-size: 35px;
-    text-transform: none;
   }
   .product-description {
     margin-bottom: 34px;
@@ -4059,7 +4058,7 @@ button.swiper-pagination-bullet {
   bottom: 17px;
   left: 25px;
   right: 25px;
-  opacity: 0.8;
+  opacity: 0.6;
   background-color: #000000;
   transition-property: opacity;
   transition-duration: 0.5s;
@@ -4105,9 +4104,6 @@ button.swiper-pagination-bullet {
   .clients-card:hover {
     transform: scale(1);
   }
-  .clients-card__opacity {
-    display: none;
-  }
   .clients-card__text {
     font-weight: 500;
     font-size: 20px;
@@ -4115,6 +4111,12 @@ button.swiper-pagination-bullet {
   }
   .clients-card-figure_left, .clients-card-figure_right {
     display: none;
+  }
+}
+@media (max-width: 1230px) {
+  .clients__title {
+    font-size: 22px;
+    line-height: 29px;
   }
 }
 @media (max-width: 350px) {
