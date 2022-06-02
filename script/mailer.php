@@ -17,15 +17,15 @@ try {
     //Server settings
 //    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
-    $mail->Host = 'smtp.yandex.ru';                                 //SMTP почты
+    $mail->Host = 'smtp.spaceweb.ru';                                 //SMTP почты
     $mail->SMTPAuth = true;
-    $mail->Username = 'unipikweb@yandex.ru';                     //login
-    $mail->Password = 'enkokiboqbwnbphi';                           //pass
+    $mail->Username = 'profstroy@unipik.ru';                     //login
+    $mail->Password = 'xzkvCBj293hg@9s6';                           //pass
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 465;                                              //порт почты
     $mail->CharSet = "utf-8";
     //Recipients
-    $mail->setFrom('unipikweb@yandex.ru', 'Профстрой');              // от кого
+    $mail->setFrom('profstroy@unipik.ru', 'Профстрой');              // от кого
     $mail->addAddress('sale@unipik.ru');                           // кому
 
     //Content
